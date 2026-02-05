@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Lisää kirja</title>
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+
 </head>
 
 <body>
@@ -25,8 +27,8 @@
 
         <label>Hinta:</label>
         <input type="text" th:field="*{price}" /><br />
-
-        <button type="submit">Tallenna</button>
+        <br />
+        <button class="btn btn-success" type="submit">Tallenna</button>
     </form>
 
 </body>
