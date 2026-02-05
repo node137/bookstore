@@ -4,11 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Kirjat</title>
+
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
 </head>
+
 
 <body>
     <h1>Kirjat</h1>
-    <table>
+    <table class="table table-striped">
         <tr>
             <th>Nimi</th>
             <th>Kirjailija</th>
@@ -19,9 +22,10 @@
             <td th:text="${kirja.author}"></td>
             <td th:text="${kirja.publicationYear}"></td>
 
-            <td> <a th:href="@{/deleteBook/{id}(id=${kirja.id})}">Poista kirja</a> <a
-                    th:href="@{/editBook/{id}(id=${kirja.id})}">Muokkaa</a></td>
+            <td> <a class="btn btn-danger" th:href="@{/deleteBook/{id}(id=${kirja.id})}">Poista kirja</a>
+                <a class="btn btn-success" th:href="@{/editBook/{id}(id=${kirja.id})}">Muokkaa</a>
+            </td>
         </tr>
     </table>
-    <a th:href="@{/addBook}">Lisää kirja</a>
+    <a class="btn btn-success" th:href="@{/addBook}">Lisää kirja</a>
 </body>
