@@ -15,11 +15,15 @@
             <th>Nimi</th>
             <th>Kirjailija</th>
             <th>Julkaisuvuosi</th>
+            <th>Kategoria</th>
+
         </tr>
         <tr th:each="kirja : ${books}">
             <td th:text="${kirja.title}"></td>
             <td th:text="${kirja.author}"></td>
             <td th:text="${kirja.publicationYear}"></td>
+            <td th:text="${kirja.category != null ? kirja.category.name : '—'}"></td>
+
 
             <td> <a class="btn btn-danger" th:href="@{/deleteBook/{id}(id=${kirja.id})}">Poista kirja</a>
                 <a class="btn btn-success" th:href="@{/editBook/{id}(id=${kirja.id})}">Muokkaa</a>
