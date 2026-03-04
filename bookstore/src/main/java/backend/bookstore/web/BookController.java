@@ -1,5 +1,6 @@
 package backend.bookstore.web;
 
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +19,9 @@ public class BookController {
     private CategoryRepository categoryRepository;
 
     // constructor injection. Can only be one constructor
-    public BookController(BookRepository repository) {
-        this.bookRepository = repository;
+    public BookController(BookRepository bookRepository, CategoryRepository categoryRepository) {
+        this.bookRepository = bookRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     @GetMapping("/index")
@@ -54,9 +56,15 @@ public class BookController {
         return "editbook";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/deleteBook/{id}")
     public String deleteBooks(@PathVariable("id") Long id) {
         bookRepository.deleteById(id);
         return "redirect:/books";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login"; // login.html
     }
 }

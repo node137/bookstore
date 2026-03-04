@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import backend.bookstore.model.AppUser;
 import backend.bookstore.model.AppUserInterface;
 
-@Service
+//@Service // This is not needed if we have a bean of this class in WebSecurityConfig
 public class UserDetailServiceImpl implements UserDetailsService {
     private final AppUserInterface repository;
 
