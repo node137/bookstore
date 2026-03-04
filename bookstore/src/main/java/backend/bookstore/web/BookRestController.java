@@ -19,7 +19,7 @@ public class BookRestController {
     private BookRepository bookRepository;
 
     // Return all books as JSON
-    @GetMapping("/api/books")
+    @GetMapping("/books")
     public List<Book> getBooks() {
         List<Book> books = new ArrayList<>();
         bookRepository.findAll().forEach(books::add);
@@ -27,7 +27,7 @@ public class BookRestController {
     }
 
     // Return one book by id as JSON
-    @GetMapping("/api/books/{id}")
+    @GetMapping("/books/{id}")
     public Optional<Book> getBookById(@PathVariable("id") Long id) {
         return bookRepository.findById(id);
     }
