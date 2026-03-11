@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import backend.bookstore.model.Book;
-import backend.bookstore.model.BookRepository;
-import backend.bookstore.model.CategoryRepository;
+import backend.bookstore.domain.Book;
+import backend.bookstore.domain.BookRepository;
+import backend.bookstore.domain.CategoryRepository;
 
 @Controller
 public class BookController {

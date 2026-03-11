@@ -1,4 +1,4 @@
-package backend.bookstore.model;
+package backend.bookstore.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
@@ -25,6 +25,13 @@ public class Book {
     private double price;
 
     public Book() {
+    }
+
+    public Book(String title, String author, int publicationYear, Category category) {
+        this.title = title;
+        this.author = author;
+        this.publicationYear = publicationYear;
+        this.category = category;
     }
 
     public Book(String title, String author, int publicationYear, String isbn, double price) {

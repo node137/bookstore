@@ -6,8 +6,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import backend.bookstore.model.AppUser;
-import backend.bookstore.model.AppUserInterface;
+import backend.bookstore.domain.AppUser;
+import backend.bookstore.domain.AppUserInterface;
 
 //@Service // This is not needed if we have a bean of this class in WebSecurityConfig
 public class UserDetailServiceImpl implements UserDetailsService {

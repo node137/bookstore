@@ -1,4 +1,4 @@
-package backend.bookstore.model;
+package backend.bookstore.domain;
 
 import java.util.List;
 

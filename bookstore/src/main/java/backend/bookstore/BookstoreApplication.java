@@ -8,10 +8,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import backend.bookstore.model.BookRepository;
-import backend.bookstore.model.Category;
-import backend.bookstore.model.CategoryRepository;
-import backend.bookstore.model.Book;
+import backend.bookstore.domain.Book;
+import backend.bookstore.domain.BookRepository;
+import backend.bookstore.domain.Category;
+import backend.bookstore.domain.CategoryRepository;
 
 @SpringBootApplication
 public class BookstoreApplication {
