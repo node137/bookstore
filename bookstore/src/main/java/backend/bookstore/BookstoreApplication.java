@@ -1,7 +1,7 @@
 package backend.bookstore;
 
-//import org.slf4j.LoggerFactory;
-//import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,8 +16,7 @@ import backend.bookstore.domain.CategoryRepository;
 @SpringBootApplication
 public class BookstoreApplication {
 
-	// private static final Logger log =
-	// LoggerFactory.getLogger(BookstoreApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(BookstoreApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(BookstoreApplication.class, args);
@@ -41,7 +40,7 @@ public class BookstoreApplication {
 
 			// log.info("fetch all books");
 			for (Book kirja : bookRepository.findAll()) {
-				// log.info(kirja.toString());
+				log.info(kirja.toString());
 			}
 		};
 	}
