@@ -3,21 +3,21 @@ package backend.bookstore;
 import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+//import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 import backend.bookstore.domain.Book;
 import backend.bookstore.domain.BookRepository;
 import backend.bookstore.domain.Category;
 import backend.bookstore.domain.CategoryRepository;
 
-@DataJpaTest
+//@DataJpaTest
 @ActiveProfiles("test")
-class BookRepositoryTests {
+class DataJpaTest {
 
     private final BookRepository bookRepository;
     private final CategoryRepository categoryRepository;
 
-    BookRepositoryTests(BookRepository bookRepository,
+    DataJpaTest(BookRepository bookRepository,
             CategoryRepository categoryRepository) {
         this.bookRepository = bookRepository;
         this.categoryRepository = categoryRepository;
